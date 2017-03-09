@@ -62,23 +62,23 @@
               %p.text-muted Realización del evento
         / <div class="row">
         / </div>
-%section.cta
+%section.know-more-about
   .cta-content
     .container
-      %a.btn.btn-outline.btn-xl{:href => "more-about.html"} Conocer más sobre esta jornada
+      %a.btn.btn-outline.btn-xl.btn-hover{:href => "more-about.html"} Conocer más sobre esta jornada
   .overlay
 %section#contact.contact.bg-primary.features
   .container
     %h2 Contactos
     .row
-      .col-md-6
+      -# .col-md-6
+      -#   .feature-item
+      -#     %i.glyphicon.glyphicon-envelope.text-primary
+      -#     %p.text-muted jocici@itcr.ac.cr
+      .col-md-12
         .feature-item
           %i.glyphicon.glyphicon-envelope.text-primary
-          %p.text-muted jocici@itcr.ac.cr
-      .col-md-6
-        .feature-item
-          %i.glyphicon.glyphicon-envelope.text-primary
-          %p.text-muted mestrada@itcr.ac.cr
+          %p.text-white mestrada@itcr.ac.cr
     /
       <footer>
       <div class="container">

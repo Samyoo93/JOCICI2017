@@ -15,7 +15,7 @@
     %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :integrity => "sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==", :rel => "stylesheet"}/
 
     / jQuery
-    %script{:charset => "utf8", :src => "//code.jquery.com/jquery-1.10.2.min.js", :type => "text/javascript"}
+    -# %script{:charset => "utf8", :src => "//code.jquery.com/jquery-1.10.2.min.js", :type => "text/javascript"}
     / Latest compiled and minified JavaScript
     %script{:crossorigin => "anonymous", :integrity => "sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
 
@@ -62,12 +62,10 @@
                   %img{:alt => "", :src => image_url("LogoJocici_definitivo.png")}/
 
 
-  -# %section#work-sending.bg-primary.text-center
-  -#   .container
-  -#     .row
-  -#       .col-md-8.col-md-offset-2
-  -#         %h2.section-heading Tiempo
-  -#         #getting-started
+  %section#work-sending.text-center.know-more-about
+    .container
+      .row
+        #getting-started.personalizar-tiempo
 
 
   = yield

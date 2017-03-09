@@ -16,8 +16,12 @@
 //= require_tree .
 
 
-$("#getting-started").countdown("2017/01/01", function(event) {
-    $(this).text(
-      event.strftime('%D days %H:%M:%S')
-    );
+$( document ).ready(function() {
+  "use strict";
+  $("#getting-started").countdown("2017/08/23", function(event) {
+      $(this).text(
+          event.strftime('Faltan %w semanas %d días %H hr %M minutos %S segundos')
+      );
+  });
+
 });

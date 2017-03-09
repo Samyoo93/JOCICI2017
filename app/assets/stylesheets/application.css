@@ -28,3 +28,21 @@
 .push-left{
   margin-left:3% !important;
 }
+
+.text-white{
+  color:white;
+}
+
+.know-more-about{
+  background-color: #C6D300;
+}
+
+
+.btn-hover:hover{
+  color:white !important;
+}
+
+.personalizar-tiempo{
+  font-size: 3em;
+  color:white;
+}
