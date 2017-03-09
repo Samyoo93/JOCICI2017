@@ -1,0 +1,73 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title JOCICI2017
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'new-age-min', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'jquery.countdown', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'new-age-min', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+    / Latest compiled and minified CSS
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :integrity => "sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==", :rel => "stylesheet"}/
+
+    / jQuery
+    %script{:charset => "utf8", :src => "//code.jquery.com/jquery-1.10.2.min.js", :type => "text/javascript"}
+    / Latest compiled and minified JavaScript
+    %script{:crossorigin => "anonymous", :integrity => "sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
+
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Muli", :rel => "stylesheet"}/
+
+
+  %body#page-top
+    %nav#mainNav.navbar.navbar-default.navbar-fixed-top
+      .container
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            Menu
+            %i.fa.fa-bars
+          %a.navbar-inner.page-scroll{:href => "header"}
+            %img#logo-size.img-responsive{:alt => "", :src => image_url("LogoHorizontal.png")}
+        / Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse.push-top
+          %ul.nav.navbar-nav.navbar-left.push-left
+            %li
+              %a.page-scroll{:href => main_pages_url + "#objective"} Objetivos
+            %li
+              %a.page-scroll{:href => main_pages_url+ "#important-dates"} Organizadores y fechas
+            %li
+              %a.page-scroll{:href => main_pages_url+ "#contact"} Contact
+            %li
+              %a.page-scroll{:href => committee_index_path + "#committee"} Comité
+            %li
+              %a.page-scroll{:href => more_about_index_path + "#more-about"} Más acerca de la jornada
+        / /.navbar-collapse
+      / /.container-fluid
+  %header
+    .container
+      .row
+        .col-sm-7
+          .header-content
+            .header-content-inner
+              / <a href="#download" class="btn btn-outline btn-xl page-scroll">Start Now for Free!</a>
+              .row
+                .col-md-12
+                  %img{:alt => "", :src => image_url("LogoJocici_definitivo.png")}/
+
+
+  -# %section#work-sending.bg-primary.text-center
+  -#   .container
+  -#     .row
+  -#       .col-md-8.col-md-offset-2
+  -#         %h2.section-heading Tiempo
+  -#         #getting-started
+
+
+  = yield
