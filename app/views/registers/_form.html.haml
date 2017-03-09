@@ -1,0 +1,26 @@
+= form_for @register do |f|
+  - if @register.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@register.errors.count, "error")} prohibited this register from being saved:"
+      %ul
+        - @register.errors.full_messages.each do |msg|
+          %li= msg
+
+  .row
+    .field.text_field_color
+      = f.label :name
+      = f.text_field :name
+  .row
+    .field.text_field_color
+      = f.label :lastName
+      = f.text_field :lastName
+  .row
+    .field.text_field_color
+      = f.label :email
+      = f.text_field :email
+  .row
+    .field
+      = raw recaptcha_tag(:challenge)
+  .row
+    .actions.btn.btn-default
+      = f.submit 'Registrarse'

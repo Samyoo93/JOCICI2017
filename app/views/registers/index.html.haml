@@ -1,0 +1,25 @@
+%h1 Listing registers
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Lastname
+      %th Email
+      %th
+      %th
+      %th
+
+  %tbody
+    - @registers.each do |register|
+      %tr
+        %td= register.name
+        %td= register.lastName
+        %td= register.email
+        %td= link_to 'Show', register
+        %td= link_to 'Edit', edit_register_path(register)
+        %td= link_to 'Destroy', register, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Register', new_register_path

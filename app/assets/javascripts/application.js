@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-$( document ).ready(function() {
+$( document ).on('turbolinks:load', function() {
   "use strict";
   $("#getting-started").countdown("2017/08/23", function(event) {
       $(this).text(

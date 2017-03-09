@@ -33,8 +33,8 @@
             %span.sr-only Toggle navigation
             Menu
             %i.fa.fa-bars
-          %a.navbar-inner.page-scroll{:href => "header"}
-            %img#logo-size.img-responsive{:alt => "", :src => image_url("LogoHorizontal.png")}
+          %a.navbar-inner.page-scroll{:href => root_path}
+            %img#logo-size.img-responsive{:alt => "",:src => image_url("LogoHorizontal.png")}
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse.push-top
           %ul.nav.navbar-nav.navbar-left.push-left
@@ -47,7 +47,8 @@
             %li
               %a.page-scroll{:href => committee_index_path + "#committee"} Comité
             %li
-              %a.page-scroll{:href => more_about_index_path + "#more-about"} Más acerca de la jornada
+              %a.page-scroll{:href => more_about_index_path + "#relevant-topics"} Más acerca de la jornada
+            
         / /.navbar-collapse
       / /.container-fluid
   %header

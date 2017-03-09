@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @register.name
+%p
+  %b Lastname:
+  = @register.lastName
+%p
+  %b Email:
+  = @register.email
+
+= link_to 'Edit', edit_register_path(@register)
+\|
+= link_to 'Back', registers_path
