@@ -14,14 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-
-$( document ).on('turbolinks:load', function() {
-  "use strict";
-  $("#getting-started").countdown("2017/08/23", function(event) {
-      $(this).text(
-          event.strftime('Faltan %w semanas %d días %H hr %M minutos %S segundos')
-      );
-  });
-
-});
