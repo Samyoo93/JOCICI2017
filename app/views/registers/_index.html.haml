@@ -1,0 +1,18 @@
+%h1 Listing registers
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Lastname
+      %th Email
+      %th
+      %th
+      %th
+
+  %tbody
+    - Register.all.each do |register|
+      %tr
+        %td= register.name
+        %td= register.lastName
+        %td= register.email

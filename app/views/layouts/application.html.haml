@@ -8,6 +8,7 @@
     = stylesheet_link_tag    'new-age-min', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'jquery.countdown', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'ajax', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'new-age-min', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
@@ -28,6 +29,10 @@
     %nav#mainNav.navbar.navbar-default.navbar-fixed-top
       .container
         / Brand and toggle get grouped for better mobile display
+        - if notice
+          %p.alert.alert-success= notice
+        - if alert
+          %p.alert.alert-danger= alert
         .navbar-header
           %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
             %span.sr-only Toggle navigation

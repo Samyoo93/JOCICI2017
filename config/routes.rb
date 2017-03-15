@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :registers
 
-  get "register/new" => "register#new"
+
 
   get 'more_about/index' => "more_about#index"
 

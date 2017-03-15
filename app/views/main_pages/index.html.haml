@@ -62,10 +62,21 @@
               %p.text-muted Realización del evento
         / <div class="row">
         / </div>
+
 %section.know-more-about
   .cta-content
     .container
-      %a.btn.btn-outline.btn-xl.btn-hover{:href => new_register_url} Registrarse
+      .col-md-6
+        %a.btn.btn-outline.btn-xl.btn-hover#openRegister Registrarse
+        %a.btn.btn-outline.btn-xl.btn-hover#closeRegister No deseo registrarme
+        #results
+          = render :partial =>"registers/form" , :locals => {register: Register.new}
+      .col-md-6
+        %a.btn.btn-outline.btn-xl.btn-hover#lookRegister Ver registrados
+        %a.btn.btn-outline.btn-xl.btn-hover#closeRegistered Cerrar
+        #results2
+          = render "registers/index"
+
   .overlay
 %section#contact.contact.bg-primary.features
   .container

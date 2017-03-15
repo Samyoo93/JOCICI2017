@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-recaptcha', :require => 'rack/recaptcha'
 
 gem "erb2haml", :group => :development
+gem "responders"
 
 gem 'haml-rails'
 gem 'jquery-countdown-rails'

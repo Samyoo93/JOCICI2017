@@ -25,18 +25,25 @@ class RegistersController < ApplicationController
   # POST /registers.json
   def create
     @register = Register.new(register_params)
-
+    @registers = Register.all
     respond_to do |format|
       if recaptcha_valid?
-        if @register.save
-          format.html { redirect_to @register, notice: 'Register was successfully created.' }
-          format.json { render :show, status: :created, location: @register }
+
+        @database = @registers.where(email:@register.email).take
+        if @database.nil?
+          @register.save!
+          format.html { redirect_to root_path, notice: 'Se registró correctamente' }
+          format.json { render :show, status: :created, location: @register}
+        end
+        if !@database.nil?
+          format.html { redirect_to root_path, alert: 'El correo solicitado ya está registrado' }
+          format.json { render json: @register.errors, status: :unprocessable_entity }
         else
-          format.html { render :new }
+          format.html { redirect_to root_path, alert: 'No se ha podido guardar correctamente.' }
           format.json { render json: @register.errors, status: :unprocessable_entity }
         end
       else
-        format.html { redirect_to new_register_path, notice: 'Recaptcha inválido' }
+        format.html { redirect_to root_path, alert: 'Recaptcha inválido' }
         format.json { render json: @register.errors, status: :unprocessable_entity }
       end
     end

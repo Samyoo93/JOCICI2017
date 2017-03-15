@@ -1,3 +1,3 @@
 class MainPagesController < ApplicationController
-  
+
 end
