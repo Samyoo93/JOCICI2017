@@ -28,8 +28,7 @@ Rails.application.configure do
   export RECAPTCHA_PUBLIC_KEY="6LeQRBgUAAAAAB9bOeTrM5B2TvqXWLSwA5Eiy4uT"
   export RECAPTCHA_PRIVATE_KEY="6LeQRBgUAAAAAAiGBo8iLPz3xfn2bKmx2grGcFHB"
 
-  heroku config:set RECAPTCHA_PUBLIC_KEY="6LeQRBgUAAAAAB9bOeTrM5B2TvqXWLSwA5Eiy4uT"
-  heroku config:set RECAPTCHA_PRIVATE_KEY="6LeQRBgUAAAAAAiGBo8iLPz3xfn2bKmx2grGcFHB"
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
