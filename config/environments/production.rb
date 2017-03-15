@@ -25,9 +25,6 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
-  export RECAPTCHA_PUBLIC_KEY="6LeQRBgUAAAAAB9bOeTrM5B2TvqXWLSwA5Eiy4uT"
-  export RECAPTCHA_PRIVATE_KEY="6LeQRBgUAAAAAAiGBo8iLPz3xfn2bKmx2grGcFHB"
-
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
