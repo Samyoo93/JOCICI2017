@@ -20,7 +20,7 @@
       = f.text_field :email
   .row
     .field
-      = raw recaptcha_tag(:challenge)
+      .g-recaptcha{"data-sitekey" => "6LeQRBgUAAAAAB9bOeTrM5B2TvqXWLSwA5Eiy4uT"}
   .row
     .actions.btn.btn-default
       = f.submit 'Registrarse'
