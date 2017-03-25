@@ -27,8 +27,8 @@ class RegistersController < ApplicationController
     @register = Register.new(register_params)
     @registers = Register.all
     respond_to do |format|
-      if recaptcha_valid?
-
+      # if recaptcha_valid?
+      if @register.email =~ /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
         @database = @registers.where(email:@register.email).take
         if @database.nil?
           @register.save!
@@ -43,9 +43,13 @@ class RegistersController < ApplicationController
           format.json { render json: @register.errors, status: :unprocessable_entity }
         end
       else
-        format.html { redirect_to root_path, alert: 'Recaptcha inválido' }
+        format.html { redirect_to root_path, alert: 'Formato del correo incorrecto.' }
         format.json { render json: @register.errors, status: :unprocessable_entity }
       end
+    # else
+    #   format.html { redirect_to root_path, alert: 'Recaptcha inválido' }
+    #   format.json { render json: @register.errors, status: :unprocessable_entity }
+    # end
     end
   end
 
